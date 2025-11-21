@@ -11,30 +11,67 @@
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  /* Minor Hotels Brand Colors */
+  --color-navy-primary: #13213C;
+  --color-black: #111;
+  --color-white: #fff;
+  --color-gray-light: #EBEEEE;
+  --color-gray-light-2: #F1EFF0;
+  --color-gray-light-3: #F8F8F9;
+  --color-gray-medium: #9E9E9E;
+  --color-gray-dark: #333;
+  --color-blue-light: #98D0EF;
+  --color-red-error: #E00000;
+
+  /* Overlay Colors */
+  --color-overlay-dark: rgba(32, 31, 31, 0.95);
+  --color-overlay-white-28: rgba(255, 255, 255, 0.28);
+  --color-overlay-white-20: rgba(255, 255, 255, 0.2);
+  --color-overlay-white-60: rgba(255, 255, 255, 0.6);
+
+  /* EDS Standard Colors (mapped to Minor Hotels palette) */
+  --background-color: var(--color-white);
+  --light-color: var(--color-gray-light-3);
+  --dark-color: var(--color-gray-dark);
+  --text-color: var(--color-black);
+  --link-color: var(--color-navy-primary);
+  --link-hover-color: var(--color-black);
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: "Sitka Text", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  --heading-font-family: Manuka, Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  --ui-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 17px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 15px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
+  --heading-font-size-xxl: 57.6px;
+  --heading-font-size-xl: 57.6px;
+  --heading-font-size-l: 64px;
+  --heading-font-size-m: 32px;
   --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --heading-font-size-xs: 20px;
+
+  /* letter spacing */
+  --letter-spacing-h1: 1.152px;
+  --letter-spacing-h2: 1.152px;
+  --letter-spacing-h3: 2px;
+  --letter-spacing-button: 0.7px;
+
+  /* spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 40px;
+  --spacing-xxl: 60px;
+
+  /* buttons */
+  --button-border-radius: 5px;
+  --button-padding: 10px 20px;
 
   /* nav height */
   --nav-height: 64px;
@@ -43,31 +80,65 @@
 
 /* fallback fonts */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
+  font-family: manuka-fallback;
+  size-adjust: 100%;
+  src: local('Arial Black');
 }
 
 @font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
+  font-family: sitka-text-fallback;
+  size-adjust: 100%;
+  src: local('Georgia');
 }
 
 @media (width >= 900px) {
   :root {
     /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
+    --body-font-size-m: 16px;
+    --body-font-size-s: 15px;
     --body-font-size-xs: 14px;
 
     /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
+    --heading-font-size-xxl: 57.6px;
+    --heading-font-size-xl: 57.6px;
+    --heading-font-size-l: 64px;
+    --heading-font-size-m: 32px;
+    --heading-font-size-s: 24px;
+    --heading-font-size-xs: 20px;
+  }
+}
+
+@media (width <= 900px) {
+  :root {
+    /* heading sizes - tablet */
+    --heading-font-size-xxl: 42px;
+    --heading-font-size-xl: 38px;
+    --heading-font-size-l: 32px;
+    --heading-font-size-m: 28px;
+    --heading-font-size-s: 22px;
     --heading-font-size-xs: 18px;
+
+    /* letter spacing - tablet */
+    --letter-spacing-h1: 0.84px;
+    --letter-spacing-h2: 0.76px;
+    --letter-spacing-h3: 1.28px;
+  }
+}
+
+@media (width <= 600px) {
+  :root {
+    /* heading sizes - mobile */
+    --heading-font-size-xxl: 28px;
+    --heading-font-size-xl: 24px;
+    --heading-font-size-l: 20px;
+    --heading-font-size-m: 20px;
+    --heading-font-size-s: 18px;
+    --heading-font-size-xs: 16px;
+
+    /* letter spacing - mobile */
+    --letter-spacing-h1: 0.8px;
+    --letter-spacing-h2: 0.7px;
+    --letter-spacing-h3: 1px;
   }
 }
 
@@ -108,17 +179,27 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.25;
   scroll-margin: 40px;
+  color: var(--color-navy-primary);
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+  letter-spacing: var(--letter-spacing-h1);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+  letter-spacing: var(--letter-spacing-h2);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+  letter-spacing: var(--letter-spacing-h3);
+  color: var(--color-black);
+}
 
 p,
 dl,
@@ -159,11 +240,12 @@ a:any-link {
   color: var(--link-color);
   text-decoration: none;
   overflow-wrap: break-word;
+  transition: color 0.3s ease;
 }
 
 a:hover {
   color: var(--link-hover-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* buttons */
@@ -173,42 +255,55 @@ button {
   display: inline-block;
   max-width: 100%;
   margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font-family: var(--body-font-family);
+  border: none;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  font-family: var(--ui-font-family);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 14px;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-button);
+  background-color: var(--color-navy-primary);
+  color: var(--color-white);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: all 0.3s ease;
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: var(--color-black);
+  color: var(--color-white);
   cursor: pointer;
+  text-decoration: none;
 }
 
 button:disabled,
 button:disabled:hover {
-  background-color: var(--light-color);
+  background-color: var(--color-gray-medium);
   cursor: unset;
+  opacity: 0.5;
 }
 
 a.button.secondary,
 button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
+  background-color: transparent;
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+}
+
+a.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--color-black);
+  border-color: var(--color-black);
 }
 
 main img {
@@ -259,4 +354,176 @@ main .section.highlight {
 
 .section.hidden {
   display: none;
+}
+
+/* ============================================
+   MINOR HOTELS SPECIFIC STYLES
+   ============================================ */
+
+/* Hero Sections with Overlays */
+.hero,
+.section.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.hero img,
+.section.hero-section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero > div,
+.section.hero-section > div {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-white);
+}
+
+.hero h1,
+.hero h2,
+.hero h3,
+.section.hero-section h1,
+.section.hero-section h2,
+.section.hero-section h3 {
+  color: var(--color-white);
+}
+
+/* Image overlay */
+.hero::before,
+.section.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-overlay-white-28);
+  z-index: 1;
+}
+
+/* Dark Background Sections */
+.section.dark-bg {
+  background-color: var(--color-navy-primary);
+  color: var(--color-white);
+}
+
+.section.dark-bg h1,
+.section.dark-bg h2,
+.section.dark-bg h3,
+.section.dark-bg h4,
+.section.dark-bg h5,
+.section.dark-bg h6 {
+  color: var(--color-white);
+}
+
+.section.dark-bg a:any-link {
+  color: var(--color-white);
+}
+
+.section.dark-bg a:hover {
+  color: var(--color-blue-light);
+}
+
+/* Light Background Sections */
+.section.light-bg {
+  background-color: var(--color-blue-light);
+}
+
+/* Text Utilities */
+.text-white,
+.text-white h1,
+.text-white h2,
+.text-white h3 {
+  color: var(--color-white) !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-button);
+}
+
+/* Image Wrappers with Overlays */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-overlay-white-20);
+  z-index: 1;
+}
+
+.image-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-lg);
+  color: var(--color-white);
+  z-index: 2;
+}
+
+/* Button Variants */
+.button.small {
+  padding: 8px 16px;
+  font-size: 12px;
+}
+
+.button.large {
+  padding: 14px 28px;
+  font-size: 16px;
+}
+
+.button.full-width {
+  width: 100%;
+  display: block;
+}
+
+/* Responsive Adjustments */
+@media (width <= 900px) {
+  .hero,
+  .section.hero-section {
+    min-height: 400px;
+  }
+
+  .hero > div,
+  .section.hero-section > div {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (width <= 600px) {
+  .hero,
+  .section.hero-section {
+    min-height: 300px;
+  }
+
+  .hero > div,
+  .section.hero-section > div {
+    padding: var(--spacing-md);
+  }
 }
