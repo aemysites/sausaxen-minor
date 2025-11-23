@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<script src="/scripts/aem.js" type="module"></script>
+<script src="/scripts/scripts.js" type="module"></script>
+<link rel="stylesheet" href="/styles/styles.css"/>
+</head>
+<body>
+<header></header>
+<main>
+<div><h1 id="minor-hotels---eds-block-mapping">Minor Hotels - EDS Block Mapping</h1>
+<p>This document maps the components from minorhotels.com to EDS out-of-box blocks.</p>
+<h2 id="block-mapping">Block Mapping</h2>
+<h3 id="hero-section">1. Hero Section</h3>
+<p><strong>Original</strong>: Large full-width hero with background image and centered text overlay
+<strong>EDS Block</strong>: <code>hero</code>
+<strong>Location</strong>: Homepage top section
+<strong>Features</strong>:</p>
+<ul>
+<li>Full-width background image</li>
+<li>Centered white text overlay</li>
+<li>Semi-transparent overlay (28% white)</li>
+<li>CTA button</li>
+<li>Minimum height: 500px</li>
+</ul>
+<h3 id="brandhotel-cards-carousel">2. Brand/Hotel Cards Carousel</h3>
+<p><strong>Original</strong>: Horizontal scrolling brand logos with descriptions
+<strong>EDS Block</strong>: <code>cards</code> (carousel variant)
+<strong>Location</strong>: Homepage - "Explore the world with Minor Hotels" section
+<strong>Features</strong>:</p>
+<ul>
+<li>Brand logos with names</li>
+<li>Expandable descriptions</li>
+<li>Horizontal scroll</li>
+<li>Navigation arrows</li>
+</ul>
+<h3 id="destination-cards">3. Destination Cards</h3>
+<p><strong>Original</strong>: Grid of destination cards with images
+<strong>EDS Block</strong>: <code>cards</code>
+<strong>Location</strong>: Homepage - "Destinations" section
+<strong>Features</strong>:</p>
+<ul>
+<li>Image cards with location names</li>
+<li>Grid layout (responsive)</li>
+<li>Linked cards</li>
+</ul>
+<h3 id="promotional-slidercarousel">4. Promotional Slider/Carousel</h3>
+<p><strong>Original</strong>: Full-width image slider with promotional offers
+<strong>EDS Block</strong>: <code>carousel</code>
+<strong>Location</strong>: Homepage - offers slider
+<strong>Features</strong>:</p>
+<ul>
+<li>Full-width images</li>
+<li>Text overlay</li>
+<li>Dot navigation</li>
+<li>Auto-rotate</li>
+</ul>
+<h3 id="feature-sections-more-to-explore">5. Feature Sections (More to Explore)</h3>
+<p><strong>Original</strong>: Three feature blocks with images and descriptions
+<strong>EDS Block</strong>: <code>columns</code> (with images)
+<strong>Location</strong>: Homepage - "More to Explore" section
+<strong>Features</strong>:</p>
+<ul>
+<li>3-column layout</li>
+<li>Images on alternating sides</li>
+<li>Text content with CTAs</li>
+<li>Responsive stack on mobile</li>
+</ul>
+<h3 id="offer-cards-grid">6. Offer Cards Grid</h3>
+<p><strong>Original</strong>: Grid of offer cards with images and text
+<strong>EDS Block</strong>: <code>cards</code>
+<strong>Location</strong>: Offers page - main content
+<strong>Features</strong>:</p>
+<ul>
+<li>2-column grid (desktop)</li>
+<li>Image background with text overlay</li>
+<li>CTA buttons</li>
+<li>Stacks to 1 column on mobile</li>
+</ul>
+<h3 id="ctapromo-banner">7. CTA/Promo Banner</h3>
+<p><strong>Original</strong>: Full-width promotional section with background
+<strong>EDS Block</strong>: <code>hero</code> (compact variant) or <code>section</code> with metadata
+<strong>Location</strong>: Offers page - loyalty program section
+<strong>Features</strong>:</p>
+<ul>
+<li>Background image/color</li>
+<li>Centered text</li>
+<li>CTA button</li>
+</ul>
+<h3 id="faqaccordion">8. FAQ/Accordion</h3>
+<p><strong>Original</strong>: Expandable FAQ items
+<strong>EDS Block</strong>: <code>accordion</code>
+<strong>Location</strong>: Offers page - bottom section
+<strong>Features</strong>:</p>
+<ul>
+<li>Expandable/collapsible items</li>
+<li>Click to expand</li>
+<li>Arrow indicators</li>
+</ul>
+<h3 id="headernavigation">9. Header/Navigation</h3>
+<p><strong>Original</strong>: Sticky header with logo, navigation, and booking widget
+<strong>EDS Block</strong>: <code>header</code> (custom)
+<strong>Location</strong>: Top of all pages
+<strong>Features</strong>:</p>
+<ul>
+<li>Logo</li>
+<li>Main navigation</li>
+<li>User actions (Login/Signup)</li>
+<li>Language/Currency selector</li>
+<li>Booking widget (collapsible)</li>
+</ul>
+<h3 id="footer">10. Footer</h3>
+<p><strong>Original</strong>: Multi-column footer with links and newsletter signup
+<strong>EDS Block</strong>: <code>footer</code> (custom)
+<strong>Location</strong>: Bottom of all pages
+<strong>Features</strong>:</p>
+<ul>
+<li>Newsletter signup</li>
+<li>Brand logos grid</li>
+<li>Multi-column link sections</li>
+<li>Social media links</li>
+<li>App download badges</li>
+<li>Legal links</li>
+</ul>
+<h3 id="breadcrumb">11. Breadcrumb</h3>
+<p><strong>Original</strong>: Simple breadcrumb navigation
+<strong>EDS Block</strong>: Built into page structure
+<strong>Location</strong>: Offers page top
+<strong>Features</strong>:</p>
+<ul>
+<li>Text-based navigation path</li>
+<li>Separator characters</li>
+</ul>
+<h2 id="block-priority-for-implementation">Block Priority for Implementation</h2>
+<ol>
+<li><strong>hero</strong> - Most prominent block</li>
+<li><strong>cards</strong> - Used for offers and destinations</li>
+<li><strong>header</strong> - Navigation and branding</li>
+<li><strong>footer</strong> - Site-wide information</li>
+<li><strong>carousel</strong> - Promotional content</li>
+<li><strong>columns</strong> - Feature sections</li>
+<li><strong>accordion</strong> - FAQ section</li>
+</ol>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>All blocks should maintain the navy blue (#13213C) brand color</li>
+<li>Images should be full-width with proper aspect ratios</li>
+<li>Text overlays need 28% white overlay for readability</li>
+<li>Buttons should use uppercase styling with 0.7px letter spacing</li>
+<li>Mobile breakpoint at 600px, tablet at 900px</li>
+</ul></div>
+</main>
+<footer></footer>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<script src="/scripts/aem.js" type="module"></script>
+<script src="/scripts/scripts.js" type="module"></script>
+<link rel="stylesheet" href="/styles/styles.css"/>
+</head>
+<body>
+<header></header>
+<main>
+<div><h1 id="minor-hotels-design-system---eds-implementation">Minor Hotels Design System - EDS Implementation</h1>
+<p>This document describes the design system implementation for the Minor Hotels website, based on analysis of minorhotels.com.</p>
+<h2 id="quick-start">Quick Start</h2>
+<p>The global styles are implemented in <code>/styles/styles.css</code> following EDS (Edge Delivery Services) conventions.</p>
+<h2 id="color-palette">Color Palette</h2>
+<h3 id="primary-brand-colors">Primary Brand Colors</h3>
+<ul>
+<li><strong>Navy Blue</strong>: <code>#13213C</code> - Primary brand color, used for headers, buttons, navigation</li>
+<li><strong>Black</strong>: <code>#111111</code> - Body text and secondary elements</li>
+<li><strong>White</strong>: <code>#FFFFFF</code> - Backgrounds and contrast</li>
+</ul>
+<h3 id="gray-scale">Gray Scale</h3>
+<ul>
+<li><strong>Light Gray</strong>: <code>#EBEEEE</code> - Subtle backgrounds</li>
+<li><strong>Light Gray 2</strong>: <code>#F1EFF0</code> - Alternative background</li>
+<li><strong>Light Gray 3</strong>: <code>#F8F8F9</code> - Very light backgrounds</li>
+<li><strong>Medium Gray</strong>: <code>#9E9E9E</code> - Secondary text, disabled states</li>
+<li><strong>Dark Gray</strong>: <code>#333333</code> - Secondary headings</li>
+</ul>
+<h3 id="accent-colors">Accent Colors</h3>
+<ul>
+<li><strong>Light Blue</strong>: <code>#98D0EF</code> - Newsletter sections, call-to-actions</li>
+<li><strong>Red</strong>: <code>#E00000</code> - Error states, alerts</li>
+</ul>
+<h3 id="overlay-colors">Overlay Colors</h3>
+<ul>
+<li><strong>Dark Overlay</strong>: <code>rgba(32, 31, 31, 0.95)</code> - Modal backgrounds</li>
+<li><strong>White 28%</strong>: <code>rgba(255, 255, 255, 0.28)</code> - Image overlays</li>
+<li><strong>White 20%</strong>: <code>rgba(255, 255, 255, 0.2)</code> - Card overlays</li>
+<li><strong>White 60%</strong>: <code>rgba(255, 255, 255, 0.6)</code> - Text protection overlays</li>
+</ul>
+<h2 id="typography">Typography</h2>
+<h3 id="font-families">Font Families</h3>
+<h4 id="headings">Headings</h4>
+<p><strong>Primary</strong>: Manuka (custom brand font)
+<strong>Fallbacks</strong>: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif</p>
+<h4 id="body-text">Body Text</h4>
+<p><strong>Primary</strong>: "Sitka Text" (elegant serif)
+<strong>Fallbacks</strong>: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif</p>
+<h4 id="ui-elements-buttons-navigation">UI Elements (Buttons, Navigation)</h4>
+<p><strong>Primary</strong>: "Helvetica Neue"
+<strong>Fallbacks</strong>: Helvetica, Arial, sans-serif</p>
+<h3 id="heading-sizes">Heading Sizes</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="element"><div><div>H1</div><div>57.6px</div><div>42px</div><div>28px</div></div><div><div>H2</div><div>57.6px</div><div>38px</div><div>24px</div></div><div><div>H3</div><div>64px</div><div>32px</div><div>20px</div></div><div><div>H4</div><div>32px</div><div>28px</div><div>20px</div></div><div><div>H5</div><div>24px</div><div>22px</div><div>18px</div></div><div><div>H6</div><div>20px</div><div>18px</div><div>16px</div></div></div>
+<h3 id="letter-spacing">Letter Spacing</h3>
+<ul>
+<li>H1: <code>1.152px</code> (desktop), <code>0.84px</code> (tablet), <code>0.8px</code> (mobile)</li>
+<li>H2: <code>1.152px</code> (desktop), <code>0.76px</code> (tablet), <code>0.7px</code> (mobile)</li>
+<li>H3: <code>2px</code> (desktop), <code>1.28px</code> (tablet), <code>1px</code> (mobile)</li>
+<li>Buttons: <code>0.7px</code></li>
+</ul>
+<h3 id="body-text-1">Body Text</h3>
+<ul>
+<li>Desktop: 16px</li>
+<li>Mobile: 15px</li>
+<li>Line Height: 1.6</li>
+</ul>
+<h2 id="buttons">Buttons</h2>
+<h3 id="default-button-primary">Default Button (Primary)</h3>
+<pre><code class="language-html">&#x3C;a href="#" class="button">Book Now&#x3C;/a>
+</code></pre>
+<ul>
+<li>Background: Navy Blue (#13213C)</li>
+<li>Text: White</li>
+<li>Padding: 10px 20px</li>
+<li>Border Radius: 5px</li>
+<li>Font: Helvetica Neue, 14px, bold</li>
+<li>Text Transform: UPPERCASE</li>
+<li>Letter Spacing: 0.7px</li>
+</ul>
+<h3 id="secondary-button">Secondary Button</h3>
+<pre><code class="language-html">&#x3C;a href="#" class="button secondary">Learn More&#x3C;/a>
+</code></pre>
+<ul>
+<li>Background: Transparent</li>
+<li>Text: White</li>
+<li>Border: 2px solid white</li>
+<li>Hover: Black background</li>
+</ul>
+<h3 id="button-sizes">Button Sizes</h3>
+<pre><code class="language-html">&#x3C;a href="#" class="button small">Small&#x3C;/a>
+&#x3C;a href="#" class="button large">Large&#x3C;/a>
+&#x3C;a href="#" class="button full-width">Full Width&#x3C;/a>
+</code></pre>
+<h2 id="layout-components">Layout Components</h2>
+<h3 id="hero-sections">Hero Sections</h3>
+<pre><code class="language-html">&#x3C;div class="hero">
+  &#x3C;img src="hero-image.jpg" alt="Hero">
+  &#x3C;div>
+    &#x3C;h1>Welcome to Minor Hotels&#x3C;/h1>
+    &#x3C;p>Experience luxury worldwide&#x3C;/p>
+    &#x3C;a href="#" class="button">Explore&#x3C;/a>
+  &#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<ul>
+<li>Full-width background images</li>
+<li>Semi-transparent overlay (28% white)</li>
+<li>Centered content</li>
+<li>Minimum height: 500px (desktop), 300px (mobile)</li>
+</ul>
+<h3 id="section-variants">Section Variants</h3>
+<h4 id="dark-background-section">Dark Background Section</h4>
+<pre><code class="language-html">&#x3C;div class="section dark-bg">
+  &#x3C;div>
+    &#x3C;h2>Premium Experiences&#x3C;/h2>
+    &#x3C;p>Content here...&#x3C;/p>
+  &#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h4 id="light-background-section">Light Background Section</h4>
+<pre><code class="language-html">&#x3C;div class="section light-bg">
+  &#x3C;div>
+    &#x3C;h2>Newsletter Signup&#x3C;/h2>
+    &#x3C;p>Stay connected...&#x3C;/p>
+  &#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h3 id="image-with-overlay">Image with Overlay</h3>
+<pre><code class="language-html">&#x3C;div class="image-wrapper">
+  &#x3C;img src="image.jpg" alt="Description">
+  &#x3C;div class="image-overlay">&#x3C;/div>
+  &#x3C;div class="image-content">
+    &#x3C;h3>Card Title&#x3C;/h3>
+    &#x3C;p>Card description&#x3C;/p>
+  &#x3C;/div>
+&#x3C;/div>
+</code></pre>
+<h2 id="css-variables-reference">CSS Variables Reference</h2>
+<p>All design tokens are available as CSS custom properties in <code>styles.css</code>:</p>
+<h3 id="colors">Colors</h3>
+<pre><code class="language-css">--color-navy-primary: #13213C
+--color-black: #111
+--color-white: #fff
+--color-gray-light: #EBEEEE
+--color-blue-light: #98D0EF
+</code></pre>
+<h3 id="typography-1">Typography</h3>
+<pre><code class="language-css">--heading-font-family: Manuka, Impact, ...
+--body-font-family: "Sitka Text", Palatino, ...
+--heading-font-size-xxl: 57.6px
+--letter-spacing-h1: 1.152px
+</code></pre>
+<h3 id="spacing">Spacing</h3>
+<pre><code class="language-css">--spacing-xs: 5px
+--spacing-sm: 10px
+--spacing-md: 15px
+--spacing-lg: 20px
+--spacing-xl: 40px
+--spacing-xxl: 60px
+</code></pre>
+<h3 id="buttons-1">Buttons</h3>
+<pre><code class="language-css">--button-border-radius: 5px
+--button-padding: 10px 20px
+--letter-spacing-button: 0.7px
+</code></pre>
+<h2 id="utility-classes">Utility Classes</h2>
+<h3 id="text-utilities">Text Utilities</h3>
+<ul>
+<li><code>.text-white</code> - White text color</li>
+<li><code>.text-center</code> - Center aligned text</li>
+<li><code>.text-uppercase</code> - Uppercase with button letter spacing</li>
+</ul>
+<h3 id="spacing-utilities">Spacing Utilities</h3>
+<ul>
+<li><code>.mt-sm</code>, <code>.mt-md</code>, <code>.mt-lg</code>, <code>.mt-xl</code> - Margin top</li>
+<li><code>.mb-sm</code>, <code>.mb-md</code>, <code>.mb-lg</code>, <code>.mb-xl</code> - Margin bottom</li>
+<li><code>.pt-sm</code>, <code>.pt-md</code>, <code>.pt-lg</code>, <code>.pt-xl</code> - Padding top</li>
+<li><code>.pb-sm</code>, <code>.pb-md</code>, <code>.pb-lg</code>, <code>.pb-xl</code> - Padding bottom</li>
+</ul>
+<h2 id="design-principles">Design Principles</h2>
+<ol>
+<li><strong>Luxury Branding</strong> - Premium serif fonts and large-scale photography</li>
+<li><strong>Navy Blue Identity</strong> - #13213C as signature brand color</li>
+<li><strong>Typography First</strong> - Bold Manuka headings with wide letter spacing</li>
+<li><strong>Image-Centric</strong> - Full-width photography with subtle overlays</li>
+<li><strong>Minimal UI</strong> - Clean interfaces letting content shine</li>
+<li><strong>High Contrast</strong> - Strong navy/black on white</li>
+<li><strong>Sharp Edges</strong> - Minimal border radius (5px max)</li>
+</ol>
+<h2 id="responsive-breakpoints">Responsive Breakpoints</h2>
+<ul>
+<li><strong>Desktop</strong>: 900px and above</li>
+<li><strong>Tablet</strong>: 601px to 900px</li>
+<li><strong>Mobile</strong>: 600px and below</li>
+</ul>
+<h2 id="browser-support">Browser Support</h2>
+<p>Modern browsers with CSS custom properties support:</p>
+<ul>
+<li>Chrome/Edge 88+</li>
+<li>Firefox 85+</li>
+<li>Safari 14+</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>Full design analysis: <code>/workspace/design-system-analysis.md</code></li>
+<li>Homepage screenshot: <code>/tmp/playwright/minorhotels-homepage.png</code></li>
+<li>Offers page screenshot: <code>/tmp/playwright/minorhotels-offers.png</code></li>
+</ul></div>
+</main>
+<footer></footer>
+</body>
+</html>
