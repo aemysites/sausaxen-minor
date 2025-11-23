@@ -1,0 +1,49 @@
+{
+  "variantName": "hero-promo",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2025-11-21T06:29:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.minorhotels.com/en/offers",
+    "originPage": "hotel offers promotional banner",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark-overlay",
+    "density": "minimal",
+    "purpose": "promotional-banner",
+    "imagePattern": "large",
+    "textLength": "short"
+  },
+  "contentPattern": {
+    "structure": "background image + logo image + text + CTA button",
+    "headingMaxLength": 80,
+    "descriptionMaxLength": 100,
+    "buttonCount": 1,
+    "imageCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional banners",
+      "loyalty program promotions",
+      "mid-page call-to-action sections",
+      "featured content with dark overlay"
+    ],
+    "notSuitableFor": [
+      "page headers without background images",
+      "light-colored hero sections",
+      "hero sections with multiple CTAs"
+    ],
+    "similarVariants": []
+  },
+  "designTokens": {
+    "backgroundColor": "dark with overlay",
+    "textColor": "#ffffff",
+    "minHeight": "300px"
+  },
+  "usage": {
+    "pagesUsing": ["/en/offers"],
+    "reuseCount": 1,
+    "lastUsed": "2025-11-21T06:29:00.000Z"
+  }
+}
