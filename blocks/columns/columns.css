@@ -1,96 +1,33 @@
-/* Columns Block - Minor Hotels Style
- * EDS Structure:
- * .columns > div (row) > div (column) > content
- */
-
 .columns > div {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xl);
-}
-
-.columns > div > div {
-  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 .columns img {
   width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.3s ease;
 }
 
-.columns > div > div:hover img {
-  transform: scale(1.05);
+.columns > div > div {
+  order: 1;
 }
 
-/* Image column */
 .columns > div > .columns-img-col {
   order: 0;
-  overflow: hidden;
 }
 
 .columns > div > .columns-img-col img {
   display: block;
 }
 
-/* Text column */
-.columns > div > div {
-  order: 1;
-}
-
-.columns h2,
-.columns h3,
-.columns h4 {
-  color: var(--color-navy-primary);
-  margin-top: 0;
-  margin-bottom: var(--spacing-sm);
-}
-
-.columns h3 {
-  font-size: var(--heading-font-size-m);
-}
-
-.columns p {
-  color: var(--color-black);
-  line-height: 1.6;
-  margin-bottom: var(--spacing-md);
-}
-
-.columns .button-container {
-  margin-top: auto;
-}
-
-/* Desktop: side-by-side columns */
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
-    flex-direction: row;
-    gap: var(--spacing-xl);
+    flex-direction: unset;
+    gap: 24px;
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
-  }
-
-  /* For alternating layouts, keep image order on left/right */
-  .columns > div:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-}
-
-@media (width <= 900px) {
-  .columns > div {
-    gap: var(--spacing-lg);
-  }
-}
-
-@media (width <= 600px) {
-  .columns > div {
-    gap: var(--spacing-md);
   }
 }

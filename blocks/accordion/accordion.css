@@ -1,98 +1,61 @@
-/* Accordion Block - Minor Hotels Style
- * EDS Structure:
- * .accordion > div > details > summary (title)
- * .accordion > div > details > .accordion-item-body (content)
- */
-
 .accordion details {
-  border: none;
-  border-bottom: 1px solid var(--color-gray-light);
-  margin: 0;
-}
-
-.accordion details:first-of-type {
-  border-top: 1px solid var(--color-gray-light);
+  border: 1px solid #dadada;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
 .accordion details + details {
-  margin-top: 0;
+  margin-top: 24px;
 }
 
 .accordion details p {
   margin-bottom: 0.8em;
-  color: var(--color-black);
-  font-size: var(--body-font-size-s);
-  line-height: 1.6;
 }
 
 .accordion details summary {
   position: relative;
-  padding: var(--spacing-lg);
-  padding-right: 60px;
+  padding: 0 16px;
+  padding-right: 46px;
   cursor: pointer;
   list-style: none;
   overflow: auto;
-  transition: background-color 0.3s ease;
-  font-family: var(--heading-font-family);
-  font-size: var(--heading-font-size-xs);
-  font-weight: 700;
-  color: var(--color-navy-primary);
+  transition: background-color 0.2s;
 }
 
 .accordion details[open] summary {
-  background-color: transparent;
+  background-color: var(--light-color);
 }
 
 .accordion details summary:focus,
 .accordion details summary:hover {
-  background-color: var(--color-gray-light-3);
+  background-color: var(--light-color);
 }
 
 .accordion details summary::-webkit-details-marker {
   display: none;
 }
 
-/* Arrow icon */
 .accordion details summary::after {
   content: '';
   position: absolute;
   top: 50%;
-  right: var(--spacing-lg);
-  transform: translateY(-50%) rotate(45deg);
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--color-navy-primary);
-  border-width: 0 2px 2px 0;
-  transition: transform 0.3s ease;
+  right: 18px;
+  transform: translateY(-50%) rotate(135deg);
+  width: 6px;
+  height: 6px;
+  border: 2px solid;
+  border-width: 2px 2px 0 0;
+  transition: transform 0.2s;
 }
 
 .accordion details[open] summary::after {
-  transform: translateY(-50%) rotate(-135deg);
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 .accordion details .accordion-item-body {
-  padding: 0 var(--spacing-lg) var(--spacing-lg);
+  padding: 0 16px;
 }
 
 .accordion details[open] .accordion-item-body {
-  border-top: none;
-  background-color: transparent;
-}
-
-/* Responsive */
-@media (width <= 600px) {
-  .accordion details summary {
-    padding: var(--spacing-md);
-    padding-right: 50px;
-    font-size: var(--body-font-size-m);
-  }
-
-  .accordion details summary::after {
-    right: var(--spacing-md);
-  }
-
-  .accordion details .accordion-item-body {
-    padding: 0 var(--spacing-md) var(--spacing-md);
-  }
+  border-top: 1px solid #dadada;
+  background-color: var(--background-color);
 }
