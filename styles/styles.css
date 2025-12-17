@@ -11,55 +11,58 @@
  */
 
 :root {
-  /* Minor Hotels Brand Colors */
-  --color-navy-primary: #13213C;
-  --color-black: #111;
-  --color-white: #fff;
-  --color-gray-light: #EBEEEE;
-  --color-gray-light-2: #F1EFF0;
-  --color-gray-light-3: #F8F8F9;
+  /* Beautiful Homes Brand Colors */
+  --color-primary-brown: #4A3B2E;
+  --color-black: #1D1D1F;
+  --color-white: #FDFEFF;
+  --color-beige-light: #ECE5D7;
+  --color-gray-light: #F5F5F5;
   --color-gray-medium: #9E9E9E;
   --color-gray-dark: #333;
-  --color-blue-light: #98D0EF;
-  --color-red-error: #E00000;
+  --color-text-dark: #1D1D1F;
+  --color-brown-dark: #000;
+
+  /* DCJ Government Website Colors (for reference) */
+  --color-navy-primary: #002664;
+  --color-blue-light: #E8F1F8;
 
   /* Overlay Colors */
-  --color-overlay-dark: rgba(32, 31, 31, 0.95);
+  --color-overlay-dark: rgba(0, 0, 0, 0.5);
   --color-overlay-white-28: rgba(255, 255, 255, 0.28);
   --color-overlay-white-20: rgba(255, 255, 255, 0.2);
   --color-overlay-white-60: rgba(255, 255, 255, 0.6);
 
-  /* EDS Standard Colors (mapped to Minor Hotels palette) */
+  /* EDS Standard Colors (mapped to Beautiful Homes palette) */
   --background-color: var(--color-white);
-  --light-color: var(--color-gray-light-3);
-  --dark-color: var(--color-gray-dark);
-  --text-color: var(--color-black);
-  --link-color: var(--color-navy-primary);
+  --light-color: var(--color-gray-light);
+  --dark-color: var(--color-black);
+  --text-color: var(--color-text-dark);
+  --link-color: var(--color-primary-brown);
   --link-hover-color: var(--color-black);
 
   /* fonts */
-  --body-font-family: "Sitka Text", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  --heading-font-family: Manuka, Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
-  --ui-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --body-font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --heading-font-family: Archivo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ui-font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* body sizes */
-  --body-font-size-m: 17px;
-  --body-font-size-s: 16px;
-  --body-font-size-xs: 15px;
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 57.6px;
-  --heading-font-size-xl: 57.6px;
-  --heading-font-size-l: 64px;
-  --heading-font-size-m: 32px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 20px;
+  --heading-font-size-xxl: 48px;
+  --heading-font-size-xl: 48px;
+  --heading-font-size-l: 36px;
+  --heading-font-size-m: 28px;
+  --heading-font-size-s: 22px;
+  --heading-font-size-xs: 18px;
 
   /* letter spacing */
-  --letter-spacing-h1: 1.152px;
-  --letter-spacing-h2: 1.152px;
-  --letter-spacing-h3: 2px;
-  --letter-spacing-button: 0.7px;
+  --letter-spacing-h1: 0px;
+  --letter-spacing-h2: 0px;
+  --letter-spacing-h3: 0px;
+  --letter-spacing-button: 0.5px;
 
   /* spacing */
   --spacing-xs: 5px;
@@ -149,7 +152,8 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 body.appear {
@@ -179,26 +183,32 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 700;
-  line-height: 1.25;
+  font-weight: 600;
+  line-height: 1.2;
   scroll-margin: 40px;
-  color: var(--color-navy-primary);
+  color: var(--color-black);
 }
 
 h1 {
   font-size: var(--heading-font-size-xxl);
   letter-spacing: var(--letter-spacing-h1);
+  line-height: 1.1;
+  font-weight: 600;
 }
 
 h2 {
   font-size: var(--heading-font-size-xl);
   letter-spacing: var(--letter-spacing-h2);
+  line-height: 1.1;
+  font-weight: 600;
 }
 
 h3 {
   font-size: var(--heading-font-size-l);
   letter-spacing: var(--letter-spacing-h3);
   color: var(--color-black);
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 p,
@@ -255,35 +265,39 @@ button {
   display: inline-block;
   max-width: 100%;
   margin: 12px 0;
-  border: none;
-  border-radius: var(--button-border-radius);
-  padding: var(--button-padding);
+  border: 2px solid var(--color-black);
+  border-radius: 0;
+  padding: 12px 32px;
   font-family: var(--ui-font-family);
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: var(--letter-spacing-button);
-  background-color: var(--color-navy-primary);
+  background-color: var(--color-black);
   color: var(--color-white);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--color-black);
+  background-color: var(--color-primary-brown);
+  border-color: var(--color-primary-brown);
   color: var(--color-white);
   cursor: pointer;
   text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
 }
 
 button:disabled,
@@ -325,7 +339,7 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 60px 0;
 }
 
 main > .section > div {
@@ -339,17 +353,50 @@ main > .section:first-of-type {
 }
 
 @media (width >= 900px) {
+  main > .section {
+    margin: 80px 0;
+  }
+
   main > .section > div {
     padding: 0 32px;
+  }
+}
+
+@media (width <= 600px) {
+  main > .section {
+    margin: 40px 0;
   }
 }
 
 /* section metadata */
 main .section.light,
 main .section.highlight {
-  background-color: var(--light-color);
+  background-color: var(--color-beige-light);
   margin: 0;
-  padding: 40px 0;
+  padding: 60px 0;
+}
+
+main .section.grey,
+main .section.gray {
+  background-color: var(--color-gray-light);
+  margin: 0;
+  padding: 60px 0;
+}
+
+main .section.dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  margin: 0;
+  padding: 60px 0;
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark h4,
+main .section.dark h5,
+main .section.dark h6 {
+  color: var(--color-white);
 }
 
 .section.hidden {

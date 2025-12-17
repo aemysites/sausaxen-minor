@@ -1,0 +1,91 @@
+/* Beautiful Homes Product Category Cards */
+.cards-category {
+  padding: 60px 0;
+}
+
+.cards-category > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.cards-category > ul > li {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cards-category > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.cards-category .cards-category-card-image {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.cards-category > ul > li img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cards-category > ul > li:hover img {
+  transform: scale(1.05);
+}
+
+.cards-category .cards-category-card-body {
+  padding: 16px;
+  text-align: center;
+}
+
+.cards-category .cards-category-card-body a {
+  color: var(--color-black);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cards-category .cards-category-card-body a:hover {
+  color: var(--color-primary-brown);
+}
+
+/* Responsive grid */
+@media (width >= 900px) {
+  .cards-category > ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (width <= 900px) {
+  .cards-category > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (width <= 600px) {
+  .cards-category > ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .cards-category .cards-category-card-body {
+    padding: 12px;
+  }
+
+  .cards-category .cards-category-card-body a {
+    font-size: 14px;
+  }
+}
